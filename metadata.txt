@@ -1,0 +1,39 @@
+# This file contains metadata for your plugin. Since 
+# version 2.0 of QGIS this is the proper way to supply 
+# information about a plugin. The old method of 
+# embedding metadata in __init__.py will 
+# is no longer supported since version 2.0.
+
+# This file should be included when you package your plugin.# Mandatory items:
+
+[general]
+name=Lidar Tile Maker
+qgisMinimumVersion=3.0
+description=The plugin creates a vector file containing the polygons of the tiles of a lidar campaign starting from the raster data (DSM and DTM).
+version=0.1
+author=Roberta Fagandini (Gter srl) - Roberto Marzocchi (Gter srl)
+email=assistenzagis@gter.it
+
+about=The plugin creates a vector file containing the polygons of the tiles of a lidar flight campaign starting from the raster data (DSM and DTM). The resulting GeoPackage is organized so that it can be used as input of the chm_from_lidar plugin. The attribute table, for instance, contains all the fields necessary for using the chm_from_lidar plugin. Moreover, the attribute table is automatically filled with the required values taken from the input parameters provided by the user. The Lidar Tile Maker plugin works for a single campaign. In the case of multiple campaigns, the plugin has to be run for each of them. The resulting GeoPackages have to be merged and then the resulting file can be used as input for the chm_from_lidar plugin.
+
+tracker=https://github.com/gtergeomatica/lidar_tile_maker/issues
+repository=https://github.com/gtergeomatica/lidar_tile_maker
+# End of mandatory metadata
+
+# Recommended items:
+
+# Uncomment the following line and add your changelog:
+# changelog=
+
+# Tags are comma separated with spaces allowed
+tags=Tile, LIDAR, DTM, DSM, Forestry, CHM
+
+homepage=https://github.com/gtergeomatica/lidar_tile_maker/issues
+category=Plugins
+icon=icon.png
+# experimental flag
+experimental=True
+
+# deprecated flag (applies to the whole plugin, not just a single version)
+deprecated=False
+
