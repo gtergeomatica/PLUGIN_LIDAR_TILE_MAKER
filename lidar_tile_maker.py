@@ -325,14 +325,14 @@ class LidarTileMaker:
             print(self.tile_code)
             
     # when translation will be available uncomment this function       
-    # def openHelpButton(self):
-        # if QgsSettings().value('locale/userLocale') == 'it':
-            # webbrowser.open('https://www.gter.it/')
-        # else:
-            # webbrowser.open('https://lidar-tile-maker-manuale.readthedocs.io/en/latest/')
-            
     def openHelpButton(self):
-        webbrowser.open('https://lidar-tile-maker-manuale.readthedocs.io/en/latest/')
+        if QgsSettings().value('locale/userLocale') == 'it':
+            webbrowser.open('https://lidar-tile-maker-manuale.readthedocs.io/it/latest/')
+        else:
+            webbrowser.open('https://lidar-tile-maker-manuale.readthedocs.io/en/latest/')
+            
+    # def openHelpButton(self):
+        # webbrowser.open('https://lidar-tile-maker-manuale.readthedocs.io/en/latest/')
             
     def handleEnte(self, val):
         self.enteText = val
