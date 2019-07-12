@@ -16,8 +16,9 @@ email=assistenzagis@gter.it
 
 about=The plugin creates a vector file containing the polygons of the tiles of a lidar flight campaign starting from the raster data (DSM and DTM). The resulting GeoPackage is organized so that it can be used as input of the chm_from_lidar plugin. The attribute table, for instance, contains all the fields necessary for using the chm_from_lidar plugin. Moreover, the attribute table is automatically filled with the required values taken from the input parameters provided by the user. The Lidar Tile Maker plugin works for a single campaign. In the case of multiple campaigns, the plugin has to be run for each of them. The resulting GeoPackages have to be merged and then the resulting file can be used as input for the chm_from_lidar plugin.
 
-tracker=https://github.com/gtergeomatica/lidar_tile_maker/issues
 repository=https://github.com/gtergeomatica/lidar_tile_maker
+tracker=https://github.com/gtergeomatica/lidar_tile_maker/issues
+
 # End of mandatory metadata
 
 # Recommended items:
@@ -26,9 +27,9 @@ repository=https://github.com/gtergeomatica/lidar_tile_maker
 # changelog=
 
 # Tags are comma separated with spaces allowed
-tags=Tile, LIDAR, DTM, DSM, Forestry, CHM
+tags=Tile, LIDAR, DTM, DSM, CHM, chm_from_lidar
 
-homepage=https://github.com/gtergeomatica/lidar_tile_maker/issues
+homepage=https://github.com/gtergeomatica/lidar_tile_maker
 category=Plugins
 icon=icon.png
 # experimental flag
