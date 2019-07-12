@@ -10,7 +10,7 @@
 name=Lidar Tile Maker
 qgisMinimumVersion=3.0
 description=The plugin creates a vector file containing the polygons of the tiles of a lidar campaign starting from the raster data (DSM and DTM).
-version=0.1
+version=0.2
 author=Roberta Fagandini (Gter srl) - Roberto Marzocchi (Gter srl)
 email=assistenzagis@gter.it
 
@@ -29,7 +29,7 @@ tracker=https://github.com/gtergeomatica/lidar_tile_maker/issues
 # Tags are comma separated with spaces allowed
 tags=Tile, LIDAR, DTM, DSM, CHM, chm_from_lidar
 
-homepage=https://github.com/gtergeomatica/lidar_tile_maker
+homepage=http://plugins.qgis.org/plugins/lidar_tile_maker
 category=Plugins
 icon=icon.png
 # experimental flag
