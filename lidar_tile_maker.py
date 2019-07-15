@@ -328,6 +328,8 @@ class LidarTileMaker:
     def openHelpButton(self):
         if QgsSettings().value('locale/userLocale') == 'it':
             webbrowser.open('https://lidar-tile-maker-manuale.readthedocs.io/it/latest/')
+        elif QgsSettings().value('locale/userLocale') == 'es':
+            webbrowser.open('https://lidar-tile-maker-manuale.readthedocs.io/es/latest/')
         else:
             webbrowser.open('https://lidar-tile-maker-manuale.readthedocs.io/en/latest/')
             
@@ -390,10 +392,11 @@ class LidarTileMaker:
         feat.SetField('P_DTM', p_dtm_txt)
         feat.SetField('P_DSM', p_dsm_txt)
         feat.SetField('P_CAMPAGNA', p_camp_txt)
-        feat.SetField('FORMATO', file_format)# valore da input
-        feat.SetField('ENTE', self.enteText)# valore da input 
-        feat.SetField('ANNO', self.annoText)# valore da input
-        feat.SetField('SR_EPSG', int(self.dem_code))# valore da input
+        feat.SetField('FORMATO', file_format)
+        feat.SetField('ENTE', self.enteText)
+        feat.SetField('ANNO', self.annoText)
+        feat.SetField('SR_EPSG', int(self.dem_code))
+        feat.SetField('COMPRESSIO', 'no')
         #print(file)
         self.layer.CreateFeature(feat)
         
@@ -597,6 +600,9 @@ class LidarTileMaker:
                 formato = ogr.FieldDefn('FORMATO', ogr.OFTString)
                 formato.SetWidth(25)
                 self.layer.CreateField(formato)
+                compress = ogr.FieldDefn('COMPRESSIO', ogr.OFTString)
+                compress.SetWidth(20)
+                self.layer.CreateField(compress)
                 srs_d = ogr.FieldDefn('SR_EPSG', ogr.OFTString)
                 srs_d.SetWidth(10)
                 self.layer.CreateField(srs_d)
