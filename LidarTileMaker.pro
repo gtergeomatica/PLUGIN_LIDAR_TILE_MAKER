@@ -4,4 +4,4 @@ SOURCES = __init__.py \
 
 FORMS = lidar_tile_maker_dialog_base.ui
 
-TRANSLATIONS = i18n/LidarTileMaker_it.ts
+TRANSLATIONS = i18n/LidarTileMaker_es.ts
